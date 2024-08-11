@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Encriptador de texto</title>
+  </head>
+  <body>
+    <header>
+      <img src="/src/img/Logo.png" class="logotipo" alt="Logotipo de alura" />
+    </header>
+
+    <main class="container">
+      <section class="container__content">
+        <h2 class="title"></h2>
+
+        <textarea
+        class="input_text"
+          name="user___input"
+          id="user___input"
+          placeholder="Ingrese el texto aquí"
+        ></textarea>
+
+        <span class="info_message">
+          <img
+            src="/src/img/bi_exclamation-circle-fill.png"
+            alt="exclamation_icon"
+          />
+          Solo letras minúsculas y sin acentos</span
+        >
+
+        <div class="actions_panel">
+          <button id="encrypt___btn" class="btn btn_primary">Encriptar</button>
+          <button id="decrypt___btn" class="btn btn_secondary">
+            Desencriptar
+          </button>
+        </div>
+      </section>
+
+      <aside class="result_panel empty">
+        <span id="result___panel"> </span>
+        <button
+          onclick="copyResult();"
+          class="btn btn_secondary hidden"
+          id="copy___btn"
+        >
+          Copiar
+        </button>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      Realizado por Abimael Alexander Méndez Landero
+
+      <strong> Año 2024</strong>
+    </footer>
+
+    <div id="toastBox"></div>
+  </body>
+  <script src="/src/js/app.js"></script>
+  <script src="/src/js/components/toast.js"></script>
+</html>

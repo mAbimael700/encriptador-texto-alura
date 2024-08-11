@@ -1,0 +1,259 @@
+:root {
+  --dark-blue-100: #609ed4;
+  --dark-blue-200: #356ea9;
+  --dark-blue-300: #0a3871;
+  --dark-blue-400: #072b61;
+  --dark-blue-500: #052051;
+
+  --gray-100: #ced4da;
+  --gray-200: #adb5bd;
+  --gray-300: #868e96;
+  --gray-400: #495057;
+  --gray-500: #343a40;
+
+  --light-blue-100: #f3f5fc;
+  --light-blue-200: #eff1fa;
+  --light-blue-300: #e9ecf8;
+  --light-blue-400: #aab2d5;
+  --light-blue-500: #757fb2;
+
+  --background: #f3f5fc;
+
+  --dark-red-100: #d46a6a;
+  --dark-red-200: #a93a3a;
+  --dark-red-300: #711010;
+  --dark-red-400: #610b0b;
+  --dark-red-500: #510505;
+
+  --light-red-100: #fcd3d3;
+  --light-red-200: #fabcbc;
+  --light-red-300: #f8a5a5;
+  --light-red-400: #d57070;
+  --light-red-500: #b24b4b;
+
+  --background: #f3f5fc; /* Color de fondo en un tono rojo claro */
+
+}
+
+.inter-100 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+
+body {
+  background: var(--background);
+  /* background-image: url('/src/img/demonTshirt_finalDesign\ RED2.png') ;
+  background-repeat: repeat-x; /* This will repeat the image horizontally */ 
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+.title{
+font-size: 1.3rem;
+margin-top: 0;
+}
+
+.btn {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 24px;
+  padding: 24px;
+  min-height: 24px;
+  width: 100%;
+  font-size: 16px;
+  color: var(--dark-blue-300);
+  transition: all ease 300ms;
+}
+
+.btn_primary {
+  background: var(--dark-blue-300);
+  color: white;
+}
+
+.btn_primary:hover {
+  background: var(--dark-blue-400);
+}
+
+.btn_secondary {
+  background: transparent;
+  border: 1px solid var(--dark-blue-300);
+}
+.btn_secondary:hover {
+  background: var(--light-blue-200);
+  border-color: transparent;
+}
+
+.actions_panel {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.info_message {
+  color: var(--gray-400);
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  gap: 8px;
+}
+
+.empty_message {
+  text-align: center;
+}
+
+.empty_message > strong {
+  font-size: 24px;
+}
+
+.empty_message > p {
+  font-size: 16px;
+  color: var(--gray-400);
+}
+
+.result_panel {
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 32px;
+  box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 8%);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  
+  justify-content: space-between;
+}
+
+.result_panel.empty {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result_text {
+  font-size: 24px;
+  color: var(--gray-400);
+}
+
+.input_text {
+  margin: 1.5rem 0;
+  border: none;
+  background: none;
+  
+  color: var(--dark-blue-300);
+  min-height: 60vh;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  resize: none;
+  height: 80%;
+  width: fit-content;
+}
+
+.input_text::placeholder {
+  color: var(--dark-blue-300);
+}
+
+.input_text:focus-visible {
+  outline: none;
+}
+
+.container {
+  display: flex;
+  gap: 80px;
+  min-height: calc(100vh - 80px);
+}
+
+.container__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.hidden {
+  display: none;
+}
+
+.logotipo {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.footer {
+  background: var(--gray-500);
+  padding: 32px;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .container {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  #result___panel > img {
+    display: none;
+  }
+
+  .container__content {
+    width: 100%;
+  }
+
+  .input_text{
+    font-size: 1.8rem;
+  }
+
+  .actions_panel {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .actions_panel {
+    flex-direction: row;
+  }
+
+  .container{
+    padding: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* big landscape tablets, laptops, and desktops */
+  .container {
+    flex-direction: row;
+    padding: 40px;
+  }
+
+  .input_text {
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  #result___panel > img {
+    display: block;
+  }
+
+  .actions_panel {
+    flex-direction: row;
+  }
+
+  .container__content {
+    padding-left: 200px;
+  }
+
+  .result_panel{
+    width: 40%;
+  }
+}
