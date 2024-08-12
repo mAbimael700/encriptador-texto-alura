@@ -49,6 +49,7 @@ function handleAction(event, action) {
     panelResult.parentElement.classList.remove("empty");
     copyBtn.classList.remove("hidden");
   } catch (error) {
+    userInput.classList.add("error");
     showErrorMessage(error.message);
   }
 }
@@ -99,12 +100,14 @@ function copyResult() {
 }
 
 function textValidation(text) {
+  userInput.classList.remove("error");
   for (let i = 0; i < text.length; i++) {
     let char = text[i];
     if ((char < "a" || char > "z") && char !== " ") {
       throw new Error("El texto debe contener solo letras minúsculas");
     }
   }
+  
   return true;
 }
 
@@ -115,7 +118,8 @@ function showErrorMessage(message) {
 userInput.addEventListener("change", function () {
   try {
     textValidation(userInput.value);
-
+    
+    
     if (userInput.value === "") {
       panelResult.classList.remove("result_text");
       panelResult.parentElement.classList.add("empty");
@@ -123,6 +127,8 @@ userInput.addEventListener("change", function () {
       panelResult.innerHTML = emptyInputMessage;
     }
   } catch (error) {
+    userInput.classList.add("error");
+
     showErrorMessage(error.message);
   }
 });

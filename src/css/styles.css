@@ -32,7 +32,6 @@
   --light-red-500: #b24b4b;
 
   --background: #f3f5fc; /* Color de fondo en un tono rojo claro */
-
 }
 
 .inter-100 {
@@ -43,20 +42,19 @@
   font-variation-settings: "slnt" 0;
 }
 
-
 body {
   background: var(--background);
   /* background-image: url('/src/img/demonTshirt_finalDesign\ RED2.png') ;
-  background-repeat: repeat-x; /* This will repeat the image horizontally */ 
+  background-repeat: repeat-x; /* This will repeat the image horizontally */
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
   font-style: normal;
 }
 
-.title{
-font-size: 1.3rem;
-margin-top: 0;
+.title {
+  font-size: 1.3rem;
+  margin-top: 0;
 }
 
 .btn {
@@ -127,7 +125,7 @@ margin-top: 0;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  
+
   justify-content: space-between;
 }
 
@@ -143,10 +141,11 @@ margin-top: 0;
 }
 
 .input_text {
-  margin: 1.5rem 0;
+  padding-top: 3rem;
+  margin: 0;
   border: none;
   background: none;
-  
+  transition: all ease 300ms;
   color: var(--dark-blue-300);
   min-height: 60vh;
   font-family: "Inter", sans-serif;
@@ -181,8 +180,7 @@ margin-top: 0;
 
 .logotipo {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  width: 50px;
 }
 
 .footer {
@@ -196,6 +194,11 @@ margin-top: 0;
 
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
+
+  .logotipo {
+    top: 8px;
+    left: 8px;
+  }
   .container {
     flex-direction: column;
     padding: 16px;
@@ -209,8 +212,9 @@ margin-top: 0;
     width: 100%;
   }
 
-  .input_text{
+  .input_text {
     font-size: 1.8rem;
+    width: auto;
   }
 
   .actions_panel {
@@ -224,13 +228,18 @@ margin-top: 0;
     flex-direction: row;
   }
 
-  .container{
+  .container {
     padding: 40px;
   }
 }
 
 @media (min-width: 1024px) {
   /* big landscape tablets, laptops, and desktops */
+
+  .logotipo {
+    top: 60px;
+    left: 60px;
+  }
   .container {
     flex-direction: row;
     padding: 40px;
@@ -253,7 +262,23 @@ margin-top: 0;
     padding-left: 200px;
   }
 
-  .result_panel{
+  .result_panel {
     width: 40%;
+  }
+}
+
+.error {
+  animation-name: error-animation;
+  animation-duration: 0.4s;
+
+  color: red;
+}
+
+@keyframes error-animation {
+  from {
+    color: initial;
+  }
+  to {
+    color: red;
   }
 }
