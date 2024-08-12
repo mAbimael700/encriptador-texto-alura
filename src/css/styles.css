@@ -125,8 +125,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 32px;
-
   justify-content: space-between;
+
 }
 
 .result_panel.empty {
@@ -138,14 +138,23 @@ body {
 .result_text {
   font-size: 24px;
   color: var(--gray-400);
+  transition: all ease 300ms;
+
+  word-wrap: break-word; /* Permite que el texto se ajuste y no se salga del contenedor */
+
 }
+
+
+
+
+
 
 .input_text {
   padding-top: 3rem;
   margin: 0;
   border: none;
   background: none;
-  transition: all ease 300ms;
+transition: all ease 300ms;
   color: var(--dark-blue-300);
   min-height: 60vh;
   font-family: "Inter", sans-serif;
@@ -213,8 +222,8 @@ body {
   }
 
   .input_text {
-    font-size: 1.8rem;
-    width: auto;
+    font-size: 1.8rem;    
+    width: auto ;
   }
 
   .actions_panel {
@@ -267,7 +276,8 @@ body {
   }
 }
 
-.error {
+
+.error{
   animation-name: error-animation;
   animation-duration: 0.4s;
 
@@ -275,10 +285,7 @@ body {
 }
 
 @keyframes error-animation {
-  from {
-    color: initial;
-  }
-  to {
-    color: red;
-  }
+  from {color: initial;}
+  to {color: red;}
+  
 }
