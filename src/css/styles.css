@@ -50,6 +50,7 @@ body {
   padding: 0;
   font-family: "Inter", sans-serif;
   font-style: normal;
+  box-sizing: content-box;
 }
 
 .title {
@@ -88,6 +89,7 @@ body {
 .btn_secondary:hover {
   background: var(--light-blue-200);
   border-color: transparent;
+  box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 8%);
 }
 
 .actions_panel {
@@ -272,7 +274,7 @@ transition: all ease 300ms;
   }
 
   .result_panel {
-    width: 40%;
+    width: 21rem  ;
   }
 }
 
