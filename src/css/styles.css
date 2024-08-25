@@ -274,7 +274,8 @@ transition: all ease 300ms;
   }
 
   .result_panel {
-    width: 21rem  ;
+    min-width: 21rem;
+    width: 21rem;
   }
 }
 
